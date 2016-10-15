@@ -1,0 +1,6 @@
+*.bin
+*prof.txt
+*.jsk
+*.bak
+*.exe
+*.obj
