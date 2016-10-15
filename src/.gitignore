@@ -4,3 +4,7 @@
 *.bak
 *.exe
 *.obj
+*.pgc
+*.pgd
+*.idb
+*.pdb
