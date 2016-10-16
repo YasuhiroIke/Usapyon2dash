@@ -138,7 +138,7 @@ Option::operator int() const {
 }
 
 Option::operator std::string() const {
-  assert(type == "string");
+//  assert(type == "string");
   return currentValue;
 }
 

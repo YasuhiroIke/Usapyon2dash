@@ -328,6 +328,7 @@ void MainThread::search() {
   }
 #endif
 #ifdef USAPYON2
+#if 0
   // “Š—¹‚·‚é‚×‚«‚É‚Ç‚±‚©‚©‚çillegal move‚ğ‚Á‚Ä—ˆ‚éŒ»Û‚Ì‘Îô
   // ‚Ü‚¾‡‚Á‚Ä‚¢‚é‚©‚Ç‚¤‚©©M‚È‚µcB
   if (!SentBestmove) {
@@ -337,6 +338,7 @@ void MainThread::search() {
 		  SentBestmove = true;
 	  }
   }
+#endif
 #endif // USAPYON2
 
 #ifdef NANOHA
