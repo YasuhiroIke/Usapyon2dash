@@ -22,7 +22,7 @@ http://usapyon.game.coocan.jp/usapyon2/index.html
 から先後共にダウンロード可能。
 （同じくusapyon2dash.exeと同じディレクトリに配置して下さい）
 
-# 2016/10/22
+## 2016/10/22
 
 Write_Debug_Logがファイル名指定なのに、チェックボックスになっていたのを修正。
 
