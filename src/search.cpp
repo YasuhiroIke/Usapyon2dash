@@ -1075,13 +1075,14 @@ moves_loop: // When in check search starts from here
 
       ss->moveCount = ++moveCount;
 
-#ifndef USAPYON2
-	  // ネットワーク帯域を無駄に使ってしまうので…
-      if (RootNode && thisThread == Threads.main() && Time.elapsed() > 3000)
+//#ifndef USAPYON2
+	  // ネットワーク帯域を無駄に使ってしまうので…（Slave版）
+	  // 単体版なら出してもそれ程無駄にならないハズ。
+      if (rootNode && thisThread == Threads.main() && Time.elapsed() > 3000)
           sync_cout << "info depth " << depth / ONE_PLY
                     << " currmove " << UCI::move(move)
                     << " currmovenumber " << moveCount + thisThread->PVIdx << sync_endl;
-#endif
+//#endif
 
       if (PvNode)
           (ss+1)->pv = nullptr;
