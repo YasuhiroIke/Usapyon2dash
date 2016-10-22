@@ -1,0 +1,10 @@
+*.bin
+*prof.txt
+*.jsk
+*.bak
+*.obj
+*.pgc
+*.pgd
+*.idb
+*.pdb
+*.zip
