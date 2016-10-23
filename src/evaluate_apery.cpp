@@ -40,6 +40,7 @@
 
 
 // •]‰¿ŠÖ”hash
+#ifdef EVAL_DIFF
 // 23bit 64MB
 #define EHASH_ENTRY			0x800000U
 #define EHASH_MASK          0x7FFFFFU
@@ -78,7 +79,7 @@ void ehash_store(uint64_t key, int score)
 	hash_word |= (uint64_t)(score + 0x100000);
 	ehash_tbl[(unsigned int)key & EHASH_MASK] = hash_word;
 }
-
+#endif
 
 
 // •]‰¿ŠÖ”ŠÖ˜A’è‹`
@@ -304,7 +305,9 @@ void Position::init_evaluate()
 	p_value[15-horse]         = p_value[15+horse];
 	p_value[15-dragon]        = p_value[15+dragon];
 
+#ifdef EVAL_DIFF
 	ehash_clear();
+#endif
 }
 
 int Position::compute_material() const

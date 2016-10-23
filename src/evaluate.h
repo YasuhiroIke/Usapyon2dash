@@ -42,7 +42,7 @@ namespace Eval {
 #include <emmintrin.h>
 #include <smmintrin.h>
 #endif
-#ifdef USAPYON2
+#if defined(USAPYON2) && defined(EVAL_DIFF)
 extern void ehash_clear();
 extern int ehash_probe(uint64_t current_key, int * __restrict pscore);
 extern void ehash_store(uint64_t key, int score);
