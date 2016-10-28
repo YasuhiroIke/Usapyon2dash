@@ -10,7 +10,7 @@
 
 
 電王戦トーナメントで使った評価バイナリは下記よりダウンロード可能。
-（usapyon2dash.exeと同じディレクトリに配置して下さい）
+（usapyon2dash.exe　または usapyon2dashAVX.exe　と同じディレクトリに配置して下さい）
 
 https://drive.google.com/drive/folders/0B0pVFBgivYmac1BPZHZXaDZtajg
 
@@ -19,8 +19,8 @@ https://drive.google.com/drive/folders/0B0pVFBgivYmac1BPZHZXaDZtajg
 
 http://usapyon.game.coocan.jp/usapyon2/index.html
 
-から先後共にダウンロード可能。
-（同じくusapyon2dash.exeと同じディレクトリに配置して下さい）
+から先後共にダウンロード可能です。うさぴょん２の定跡ファイルと共通です。
+（同じくusapyon2dash.exe　または usapyon2dashAVX.exe　と同じディレクトリに配置して下さい）
 
 ## 2016/10/22
 
@@ -30,3 +30,11 @@ Write_Debug_Logがファイル名指定なのに、チェックボックスに�
 
 もしかすると、ログを吐きながら将棋所と繋ぐと時々文字化け？してbestmoveが帰らない現象があったのかも知れない…。
 （結果としてタイムアウトで負ける）
+
+##2016/10/29
+
+長時間対局テストを繰り返した結論として、ログファイルを吐きながら対局すると、USIのGUIとの通信に失敗していたようです。
+
+というわけで、これで一応ＦＩＸとさせていただきます。
+思考ログをファイルに取りたい方は「ごめんなさい、バグってます…」と謝るしかありません…。
+
