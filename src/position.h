@@ -30,6 +30,11 @@
 #include <memory> // For std::unique_ptr
 #include <string>
 
+#ifdef _MSC_VER
+#else
+#include <immintrin.h> // AVX2
+#endif
+
 #ifndef NANOHA 
 #include "bitboard.h"
 #endif

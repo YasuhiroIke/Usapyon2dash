@@ -103,6 +103,40 @@ public:
   { return T(rand64() & rand64() & rand64()); }
 };
 
+#ifdef _MSC_VER
+    #include <intrin.h>
+    #ifdef _WIN64
+        #pragma intrinsic(_BitScanForward64)
+        #pragma intrinsic(_BitScanReverse64)
+        #define USING_INTRINSICS
+    #endif
+#elif defined(__GNUC__) && defined(__LP64__)
+    static inline unsigned char _BitScanForward64(unsigned long* Index, uint64_t Mask)
+    {
+        uint64_t Ret;
+        __asm__
+        (
+            "bsfq %[Mask], %[Ret]"
+            :[Ret] "=r" (Ret)
+            :[Mask] "mr" (Mask)
+        );
+        *Index = (unsigned long)Ret;
+        return Mask?1:0;
+    }
+    static inline unsigned char _BitScanReverse64(unsigned long* Index, uint64_t Mask)
+    {
+        uint64_t Ret;
+        __asm__
+        (
+            "bsrq %[Mask], %[Ret]"
+            :[Ret] "=r" (Ret)
+            :[Mask] "mr" (Mask)
+        );
+        *Index = (unsigned long)Ret;
+        return Mask?1:0;
+    }
+    #define USING_INTRINSICS
+#endif
 
 inline unsigned long lsb(int64_t b) {
 	unsigned long idx;
