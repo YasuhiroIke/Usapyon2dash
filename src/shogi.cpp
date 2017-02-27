@@ -235,6 +235,9 @@ int foutput_log(FILE *fp, const char *fmt, ...)
 	return ret;
 }
 
+
+bool appInitialized=false;
+
 // 実行ファイル起動時に行う初期化.
 void init_application_once()
 {
@@ -274,6 +277,7 @@ void init_application_once()
 			}
 		}
 	}
+	appInitialized=true;
 }
 
 // 初期化関係

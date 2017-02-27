@@ -148,6 +148,10 @@ const vector<string> Defaults = {
 
 void benchmark(const Position& current, istream& is) {
 
+	if(!appInitialized) {
+		init_application_once();
+	}
+
   string token;
   vector<string> fens;
   Search::LimitsType limits;

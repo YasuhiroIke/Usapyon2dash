@@ -43,7 +43,7 @@ int main(int argc, char* argv[]) {
 
   UCI::init(Options);
 #ifdef NANOHA
-  init_application_once();
+//  init_application_once();
 #endif
 #ifndef NANOHA
   PSQT::init();

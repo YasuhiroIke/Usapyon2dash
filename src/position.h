@@ -134,6 +134,7 @@ typedef std::unique_ptr<std::deque<StateInfo>> StateListPtr;
 
 #if defined(NANOHA)
 // 初期化関数
+extern bool appInitialized;
 extern void init_application_once();	// 実行ファイル起動時に行う初期化.
 #endif
 

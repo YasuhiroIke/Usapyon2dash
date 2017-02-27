@@ -325,7 +325,12 @@ void UCI::loop(int argc, char* argv[]) {
           Time.availableNodes = 0;
       }
 #endif
-      else if (token == "isready")    sync_cout << "readyok" << sync_endl;
+      else if (token == "isready") {
+      	if (!appInitialized) {
+      		init_application_once();
+      	}
+      	sync_cout << "readyok" << sync_endl;
+      }
       else if (token == "go")         go(pos, is);
       else if (token == "position")   position(pos, is);
 #ifdef USAPYON2
