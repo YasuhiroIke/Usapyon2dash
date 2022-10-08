@@ -13,7 +13,8 @@
 （usapyon2dash.exe　または usapyon2dashAVX.exe　と同じディレクトリに配置して下さい）
 
 ~~https://drive.google.com/drive/folders/0B0pVFBgivYmac1BPZHZXaDZtajg~~
-　＜Googleドライブがあふれてしまったのでここでの配布は中止しました
+
+＜Googleドライブがあふれてしまったのでここでの配布は中止しました
 
 定跡は、
 
@@ -29,20 +30,32 @@ https://github.com/YasuhiroIke/Usapyon2dash/releases
 から、評価バイナリ・定跡共にダウンロード可能です。
 （一式全部持って行くと良いかと思います）
 
-## ビルド方法について
+## Windows向けビルド方法について
 
 VisualStudioが必要です。（直近では、Visual Studio 2019で確認）
 
  x64 Native Tools Command Prompt
+
 を開き、ソースコードのあるディレクトリにて、
 
 nmake -f Makefile.vs
+
 もしくは
+
 nmake -f MakefileAVX.vs
+
 を実行すると、ソースコードと同じディレクトリに、obj/exeファイルが
 （ビルドに成功すれば）出来ます。
 
 (警告がいっぱい出るのですが、致命的なものはないので、無視して下さい。)
+
+
+## Linux向けビルド方法について
+
+ソースコードのディレクトリにて、　make　だけでビルドできる（かも知れない）はず
+
+大分前に、makefileは作って一旦は試してみていますが、
+数年間触ってないので…。
 
 
 ## 2016/10/22
